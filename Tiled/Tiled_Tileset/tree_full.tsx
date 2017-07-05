@@ -2,10 +2,7 @@
 <tileset name="tree" tilewidth="64" tileheight="64" tilecount="64" columns="8">
  <image source="tree_full.png" width="512" height="512"/>
  <tile id="1">
-  <objectgroup draworder="index">
-   <object id="1" x="0.333333" y="49" width="15.6667" height="10.6667"/>
-   <object id="2" x="46.3333" y="48.3333" width="17.3333" height="11"/>
-  </objectgroup>
+  <objectgroup draworder="index"/>
  </tile>
  <tile id="3">
   <objectgroup draworder="index">
@@ -13,10 +10,7 @@
   </objectgroup>
  </tile>
  <tile id="5">
-  <objectgroup draworder="index">
-   <object id="1" x="0.333333" y="48" width="12.6667" height="14.3333"/>
-   <object id="2" x="49.3333" y="48.3333" width="14.3333" height="12"/>
-  </objectgroup>
+  <objectgroup draworder="index"/>
  </tile>
  <tile id="7">
   <objectgroup draworder="index">
@@ -30,7 +24,7 @@
  </tile>
  <tile id="9">
   <objectgroup draworder="index">
-   <object id="1" x="15.3333" y="48.6667" width="35" height="14"/>
+   <object id="2" x="1" y="0" width="64" height="64"/>
   </objectgroup>
  </tile>
  <tile id="11">
@@ -45,7 +39,7 @@
  </tile>
  <tile id="13">
   <objectgroup draworder="index">
-   <object id="1" x="18" y="48.6667" width="29" height="12.6667"/>
+   <object id="2" x="1" y="2" width="60" height="60"/>
   </objectgroup>
  </tile>
  <tile id="15">

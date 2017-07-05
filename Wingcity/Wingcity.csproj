@@ -85,7 +85,15 @@
     <Compile Include="Assets\PixelPerfectCamera\Scripts\PixelSnap.cs" />
     <Compile Include="Assets\PixelPerfectCamera\Scripts\Scroller.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\DayNightController.cs" />
+    <Compile Include="Assets\Scripts\HungerPlayer.cs" />
+    <Compile Include="Assets\Scripts\KillEnemy.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PlayerHungerManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerStartPoint.cs" />
+    <Compile Include="Assets\Scripts\SheepController.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\WarpNewArea.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\CircleObject.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GPUInstancing.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GameObjectExtensions.cs" />
@@ -107,11 +115,15 @@
   <ItemGroup>
     <None Include="Assets\PixelPerfectCamera\README.txt" />
     <None Include="Assets\PixelPerfectCamera\background_art_license.txt" />
+    <None Include="Assets\Tiled2Unity\Imported\Map001.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\Map002.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\Map003.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\Map004.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\TestMap.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
     <None Include="Assets\Tiled2Unity\Imported\test1.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\test2.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\test5.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\License.txt" />
     <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />
     <None Include="Assets\Tiled2Unity\Meshes\_ReadMe.txt" />

@@ -17,7 +17,7 @@ public class QuestTrigger : MonoBehaviour {
         theQM = FindObjectOfType<QuestManager>();
 
         //임의로 추가.
-        //theQM.quests[questNumber].gameObject.SetActive(false);
+        theQM.quests[questNumber].gameObject.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -69,7 +69,7 @@ public class QuestTrigger : MonoBehaviour {
     {
         if (!theQM.questCompleted[questNumber])
         {
-            //Debug.Log("quest not completed");
+            Debug.Log("quest not completed");
 
 
             if (startQuest && !theQM.quests[questNumber].gameObject.activeSelf)

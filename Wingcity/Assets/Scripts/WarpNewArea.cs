@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WarpNewArea : MonoBehaviour {
 
@@ -25,7 +26,7 @@ public class WarpNewArea : MonoBehaviour {
     {
         if(other.gameObject.name == "newPlayer")
         {
-            Application.LoadLevel(levelToLoad);
+            SceneManager.LoadScene(levelToLoad);
             thePlayer.startPoint = exitPoint;
         }
     }

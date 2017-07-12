@@ -36,10 +36,10 @@ public class DialogueHolder : MonoBehaviour {
                   
                 }
                 //NPC 멈추게 하는 함수
-                /*if(transform.parent.GetComponent<NPCController>() != null)
+                if(transform.parent.GetComponent<NPCController>() != null)
                 {
                     transform.parent.GetComponent<NPCController>().canMove = false;
-                }*/
+                }
                 
             }
         }

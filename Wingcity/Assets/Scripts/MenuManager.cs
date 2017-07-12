@@ -7,10 +7,14 @@ using UnityEngine.UI;
 public class MenuManager : MonoBehaviour {
 
     public GameObject[] mBox;
-    public Text[] dText;
+    //public Text[] dText;
     public int menuNumber;
-    public bool[] menuActive;
+    //public bool[] menuActive;
     public int menuOnOff;
+    public GameObject[] iBox;
+    public int itemMenuNumber;
+    //public Text iText;
+
 
     protected bool paused;
 
@@ -20,15 +24,29 @@ public class MenuManager : MonoBehaviour {
         for(int i = 0; i <= menuNumber; i++)
         {
             mBox[i].SetActive(false);           
-
+            
+        }
+        for(int i = 0; i <= itemMenuNumber; i++)
+        {
+            iBox[i].SetActive(false);
         }
         menuOnOff = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if(menuOnOff !=2 && Input.GetKeyDown(KeyCode.Escape))
+
+        
+
+
+        if (menuOnOff !=2 && Input.GetKeyUp(KeyCode.Escape))
         {
+
+            for (int i = 0; i <= itemMenuNumber; i++)
+            {
+                iBox[i].SetActive(false);
+            }
+
             for (int i = 0; i <= menuNumber; i++)
             {                
                 mBox[i].SetActive(true);                
@@ -49,4 +67,21 @@ public class MenuManager : MonoBehaviour {
         }
 
 	}
+
+    public void ItemMenu()
+    {
+        for(int i=0; i<= itemMenuNumber; i++)
+        {
+            iBox[i].SetActive(true);
+        }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            for (int i = 0; i <= itemMenuNumber; i++)
+            {
+                iBox[i].SetActive(false);
+            }
+        }
+    }
+
+
 }

@@ -8,6 +8,9 @@ public class DialogueQuest : MonoBehaviour {
     private DialogueManager dMAn;
     //
     private QuestTrigger theQT;
+    private QuestManager theQM;
+
+    public int questNumber;
 
     public string[] ingQuestdialogueLines;
     public string[] questDialogueLines;
@@ -19,6 +22,8 @@ public class DialogueQuest : MonoBehaviour {
         dMAn = FindObjectOfType<DialogueManager>();
         //
         theQT = FindObjectOfType<QuestTrigger>();
+        theQM = FindObjectOfType<QuestManager>();
+
     }
 
     // Update is called once per frame
@@ -55,6 +60,7 @@ public class DialogueQuest : MonoBehaviour {
                     {
                         dMAn.dialogueLines = clearDialogueLines;
                         dMAn.ClearDialogue();
+                        theQM.questCompleted[questNumber] = true;
 
                     }
                 }

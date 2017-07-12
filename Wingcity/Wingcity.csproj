@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\DialogueQuest.cs" />
     <Compile Include="Assets\Scripts\HungerPlayer.cs" />
     <Compile Include="Assets\Scripts\KillEnemy.cs" />
+    <Compile Include="Assets\Scripts\MenuManager.cs" />
     <Compile Include="Assets\Scripts\MoneyManager.cs" />
     <Compile Include="Assets\Scripts\MoneyPickUp.cs" />
     <Compile Include="Assets\Scripts\NPCController.cs" />

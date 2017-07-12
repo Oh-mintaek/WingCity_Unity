@@ -12,7 +12,12 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody2D myRigidbody;
     
     //playerMoving을 boolean으로 사용해서 움직이고있나 멈춰있나를 판단. 이동애니메이션 사용.
-    private bool playerMoving;
+    public bool playerMoving;
+
+    //플레이어 대화상태.
+    public bool playerNowDialogue;
+
+    //public GameObject player;
 
     //늑대변환.
    // private bool playerChange;
@@ -57,48 +62,58 @@ public class PlayerController : MonoBehaviour {
         //기본적인 상태 = false;.
 
         playerMoving = false;
-        
+        //playerNowDialogue = false;
 
+        //플레이어가 대화중이 아닐때
         //player가 움직일때 값을 입력받고 playerMoving을 true로 해줌.
-        if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
+        if (playerNowDialogue)
         {
+            myRigidbody.velocity = Vector2.zero;
 
-           // transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.smoothDeltaTime, 0f, 0f));
-            myRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * currentmoveSpeed * Time.smoothDeltaTime, myRigidbody.velocity.y);
-            playerMoving = true;
-            
-            lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
-
-
-        }
-
-        if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
-        {
-           // transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * moveSpeed * Time.smoothDeltaTime, 0f));
-            myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, Input.GetAxisRaw("Vertical") * currentmoveSpeed * Time.smoothDeltaTime);
-            playerMoving = true;
-            lastMove = new Vector2(0f, Input.GetAxisRaw("Vertical"));
-            
-        }
-
-        if (Input.GetAxisRaw("Horizontal") <= 0.5f && Input.GetAxisRaw("Horizontal") >= -0.5f)
-        {
-            myRigidbody.velocity = new Vector2(0, myRigidbody.velocity.y);
-        }
-
-        if (Input.GetAxisRaw("Vertical") <= 0.5f && Input.GetAxisRaw("Vertical") >= -0.5f)
-        {
-            myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, 0);
-        }
-
-        if(Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.5f && Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.5f)
-        {
-            currentmoveSpeed = moveSpeed * diagonalSpeed;
         }
         else
         {
-            currentmoveSpeed = moveSpeed;
+            if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
+            {
+
+                // transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.smoothDeltaTime, 0f, 0f));
+                myRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * currentmoveSpeed * Time.smoothDeltaTime, myRigidbody.velocity.y);
+                playerMoving = true;
+
+                lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
+
+
+            }
+
+            if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
+            {
+                // transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * moveSpeed * Time.smoothDeltaTime, 0f));
+                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, Input.GetAxisRaw("Vertical") * currentmoveSpeed * Time.smoothDeltaTime);
+                playerMoving = true;
+                lastMove = new Vector2(0f, Input.GetAxisRaw("Vertical"));
+
+            }
+
+            if (Input.GetAxisRaw("Horizontal") <= 0.5f && Input.GetAxisRaw("Horizontal") >= -0.5f)
+            {
+                myRigidbody.velocity = new Vector2(0, myRigidbody.velocity.y);
+            }
+
+            if (Input.GetAxisRaw("Vertical") <= 0.5f && Input.GetAxisRaw("Vertical") >= -0.5f)
+            {
+                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, 0);
+            }
+
+            if (Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.5f && Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.5f)
+            {
+                currentmoveSpeed = moveSpeed * diagonalSpeed;
+            }
+            else
+            {
+                currentmoveSpeed = moveSpeed;
+            }
         }
+        
 
     /*    if (timeNow >= 1200)
         {

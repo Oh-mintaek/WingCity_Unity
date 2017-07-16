@@ -8,6 +8,7 @@ public class MoneyManager : MonoBehaviour {
 
     public Text MoneyText;
     public int currentMoney;
+    public int savedMoney;
 
 
 	// Use this for initialization
@@ -40,5 +41,11 @@ public class MoneyManager : MonoBehaviour {
         PlayerPrefs.SetInt("CurrentMoney", currentMoney);
         MoneyText.text = "Money : " + currentMoney;
 
+    }
+
+    public void SavedMoney()
+    {
+        PlayerPrefs.SetInt("CurrentMoney", savedMoney);
+        MoneyText.text = "Money : " + savedMoney;
     }
 }

@@ -8,7 +8,8 @@ public class PreferenceManager : MonoBehaviour {
 
     public Text PreferenceText;
     public int currentPreference;
-    
+    public int savedPreference;
+
 	// Use this for initialization
 	void Start () {
         PlayerPrefs.SetInt("CurrentPreference", 0);
@@ -37,5 +38,11 @@ public class PreferenceManager : MonoBehaviour {
         currentPreference += preferenceToAdd;
         PlayerPrefs.SetInt("CurrentPreference", currentPreference);
         PreferenceText.text = "Preference : " + currentPreference;
+    }
+
+    public void SavedPreference()
+    {
+        PlayerPrefs.SetInt("CurrentPreference", savedPreference);
+        PreferenceText.text = "Preference : " + savedPreference;
     }
 }

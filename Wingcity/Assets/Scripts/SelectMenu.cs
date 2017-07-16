@@ -7,11 +7,15 @@ public class SelectMenu : MonoBehaviour {
 
     
     public MenuManager theMM;
+    public SaveLoad theSL;
+
 
 	// Use this for initialization
 	void Start () {
 
         theMM = FindObjectOfType<MenuManager>();
+        theSL = FindObjectOfType<SaveLoad>();
+
 
 	}
 	
@@ -19,6 +23,12 @@ public class SelectMenu : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void SaveButton()
+    {
+        theSL.SaveData();
+
+    }
 
     public void MainMenuButton()
     {

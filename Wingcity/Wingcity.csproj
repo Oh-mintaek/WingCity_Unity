@@ -105,9 +105,11 @@
     <Compile Include="Assets\Scripts\QuestObject.cs" />
     <Compile Include="Assets\Scripts\QuestSheepController.cs" />
     <Compile Include="Assets\Scripts\QuestTrigger.cs" />
+    <Compile Include="Assets\Scripts\SaveLoad.cs" />
     <Compile Include="Assets\Scripts\SelectMenu.cs" />
     <Compile Include="Assets\Scripts\SheepController.cs" />
     <Compile Include="Assets\Scripts\ShepherdingQuest.cs" />
+    <Compile Include="Assets\Scripts\TitleMenuManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\WarpNewArea.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\CircleObject.cs" />

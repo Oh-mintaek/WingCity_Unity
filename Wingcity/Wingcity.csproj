@@ -89,8 +89,8 @@
     <Compile Include="Assets\Scripts\DialogueHolder.cs" />
     <Compile Include="Assets\Scripts\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\DialogueQuest.cs" />
+    <Compile Include="Assets\Scripts\DialogueScript.cs" />
     <Compile Include="Assets\Scripts\HungerPlayer.cs" />
-    <Compile Include="Assets\Scripts\IncreasePreference.cs" />
     <Compile Include="Assets\Scripts\KillEnemy.cs" />
     <Compile Include="Assets\Scripts\MenuManager.cs" />
     <Compile Include="Assets\Scripts\MoneyManager.cs" />
@@ -99,10 +99,12 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerHungerManager.cs" />
     <Compile Include="Assets\Scripts\PlayerStartPoint.cs" />
+    <Compile Include="Assets\Scripts\PreferenceIncrease.cs" />
     <Compile Include="Assets\Scripts\PreferenceManager.cs" />
     <Compile Include="Assets\Scripts\QuestItem.cs" />
     <Compile Include="Assets\Scripts\QuestManager.cs" />
     <Compile Include="Assets\Scripts\QuestObject.cs" />
+    <Compile Include="Assets\Scripts\QuestOnOffClear.cs" />
     <Compile Include="Assets\Scripts\QuestSheepController.cs" />
     <Compile Include="Assets\Scripts\QuestTrigger.cs" />
     <Compile Include="Assets\Scripts\SaveLoad.cs" />

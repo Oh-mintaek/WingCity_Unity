@@ -10,7 +10,10 @@ public class DialogueManager : MonoBehaviour {
     public Text dText;
     //
     public PlayerController thePC;
-    public QuestTrigger theQT;
+    //public QuestTrigger theQT;
+    public DialogueScript theDS;
+    public QuestOnOffClear theQOOC;
+
 
     public bool dialogueActive;
     public string[] dialogueLines;
@@ -27,15 +30,16 @@ public class DialogueManager : MonoBehaviour {
 
         //
         thePC = FindObjectOfType<PlayerController>();
-        theQT = FindObjectOfType<QuestTrigger>();
+        //theQT = FindObjectOfType<QuestTrigger>();
+        theDS = FindObjectOfType<DialogueScript>();
+        theQOOC = FindObjectOfType<QuestOnOffClear>();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (dialogueActive && Input.GetKeyDown(KeyCode.Space))
-        {
-            //dBox.SetActive(false);
-            //dialogueActive = false;
+        {                      
             currentLine++;
         }
 
@@ -44,8 +48,7 @@ public class DialogueManager : MonoBehaviour {
             dBox.SetActive(false);
             dialogueActive = false;
 
-            currentLine = 0;
-            //
+            currentLine = 0;            
             thePC.playerNowDialogue = false;
         }
         dText.text = dialogueLines[currentLine];
@@ -62,30 +65,39 @@ public class DialogueManager : MonoBehaviour {
     public void ShowDialogue()
     {
         //
-        thePC.playerNowDialogue = true;
-        
+        dialogueLines = theDS.dialogueLines;
+        thePC.playerNowDialogue = true;        
         dialogueActive = true;
         dBox.SetActive(true);
-
+        
     }
     //
     public void QuestDialogue()
     {
+        dialogueLines = theDS.questDialogueLines;
         thePC.playerNowDialogue = true;
         dialogueActive = true;
         dBox.SetActive(true);
-        theQT.startQuest = true;
-        theQT.QuestStart();
+        theQOOC.QuestStart();
+                
+    }
+
+    public void IngQuestDialogue()
+    {
+        dialogueLines = theDS.ingQuestDialogueLines;
+        thePC.playerNowDialogue = true;
+        dialogueActive = true;
+        dBox.SetActive(true);  
         
     }
 
     public void ClearDialogue()
     {
+        dialogueLines = theDS.clearDiaglogueLines;
         thePC.playerNowDialogue = true;
         dialogueActive = true;
         dBox.SetActive(true);
-        theQT.endQuest = false;
-        theQT.startQuest = false;
-        theQT.QuestStart();
+        theQOOC.QuestClear();        
+       
     }
 }

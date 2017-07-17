@@ -29,7 +29,7 @@ public class QuestSheepController : MonoBehaviour {
         //
         //thePC = FindObjectOfType<PlayerController>();
 
-
+        player = GameObject.Find("newPlayer");
         myRigidbody = GetComponent<Rigidbody2D>();
 
         //

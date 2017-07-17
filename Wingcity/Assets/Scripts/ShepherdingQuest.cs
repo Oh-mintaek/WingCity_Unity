@@ -17,6 +17,7 @@ public class ShepherdingQuest : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        player = GameObject.Find("newPlayer");
         theQT = FindObjectOfType<QuestTrigger>();
         //theQM = FindObjectOfType<QuestManager>();
         

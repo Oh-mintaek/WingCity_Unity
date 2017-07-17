@@ -8,11 +8,13 @@ public class WarpNewArea : MonoBehaviour {
     public string levelToLoad;
 
     public string exitPoint;
-
-    private PlayerController thePlayer;
+    public GameObject player;
+    public PlayerController thePlayer;
 
 	// Use this for initialization
 	void Start () {
+        player = GameObject.Find("newPlayer");
+
         thePlayer = FindObjectOfType<PlayerController>();
 
 	}

@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class TitleMenuManager : MonoBehaviour {
 
     public GameObject[] tBox;
     public int menuNumber;
-    
+    public SaveLoad theSL;
 
 	// Use this for initialization
 	void Start () {
-       
+        theSL = FindObjectOfType<SaveLoad>();
+
 		
 	}
 	
@@ -21,8 +22,19 @@ public class TitleMenuManager : MonoBehaviour {
 		
 	}
 
-    /*void StartButton()
+    public void StartButton()
+    {
+        SceneManager.LoadScene("Map004");
+    }
+
+    public void LoadButton()
+    {
+        theSL.LoadData();
+    }
+
+    public void ExitButton()
     {
 
-    }*/
+    }
+
 }

@@ -9,9 +9,11 @@ public class PlayerStartPoint : MonoBehaviour {
     //public Vector2 startDirection;
 
     public string pointName;
+    public GameObject player;
 
     // Use this for initialization
     void Start () {
+        player = GameObject.Find("newPlayer");
         thePlayer = FindObjectOfType<PlayerController>();
 
         if (thePlayer.startPoint == pointName)

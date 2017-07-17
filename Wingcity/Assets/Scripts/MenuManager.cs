@@ -14,6 +14,10 @@ public class MenuManager : MonoBehaviour {
     public GameObject[] iBox;
     public int itemMenuNumber;
     //public Text iText;
+    public GameObject[] equipmentItem;
+    public int equipmentItemNumber;
+    public GameObject[] foodItem;
+    public int foodItemNumber;
 
 
     protected bool paused;
@@ -74,11 +78,60 @@ public class MenuManager : MonoBehaviour {
         {
             iBox[i].SetActive(true);
         }
-        if(Input.GetKeyDown(KeyCode.Escape))
+
+        for (int i = 0; i <= foodItemNumber; i++)
+        {
+            foodItem[i].SetActive(false);
+
+        }
+
+        for (int i = 0; i <= equipmentItemNumber; i++)
+        {
+            equipmentItem[i].SetActive(false);
+
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             for (int i = 0; i <= itemMenuNumber; i++)
             {
                 iBox[i].SetActive(false);
+            }
+        }
+    }
+
+    public void EquipmentMenu()
+    {
+        for (int i = 0; i <= equipmentItemNumber; i++)
+        {
+            equipmentItem[i].SetActive(true);
+
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            for (int i = 0; i <= equipmentItemNumber; i++)
+            {
+                equipmentItem[i].SetActive(false);
+
+            }
+        }
+    }
+
+    public void FoodMenu()
+    {
+        for (int i = 0; i <= foodItemNumber; i++)
+        {
+            foodItem[i].SetActive(true);
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            for (int i = 0; i <= foodItemNumber; i++)
+            {
+                foodItem[i].SetActive(false);
+
             }
         }
     }

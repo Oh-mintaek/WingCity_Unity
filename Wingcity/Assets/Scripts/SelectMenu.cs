@@ -46,10 +46,36 @@ public class SelectMenu : MonoBehaviour {
         
     }
 
+
     public void ItemButton()
     {
         theMM.ItemMenu();
     }
 
+
+    public void FoodButton()
+    {
+        for (int i = 0; i <= theMM.equipmentItemNumber; i++)
+        {
+            theMM.equipmentItem[i].SetActive(false);
+
+        }
+
+        theMM.FoodMenu();
+
+    }
+
+
+    public void EquipmentButton()
+    {
+
+        for (int i = 0; i <= theMM.foodItemNumber; i++)
+        {
+            theMM.foodItem[i].SetActive(false);
+
+        }
+
+        theMM.EquipmentMenu();
+    }
 
 }

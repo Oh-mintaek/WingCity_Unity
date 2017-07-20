@@ -33,14 +33,18 @@ public class DialogueManager : MonoBehaviour {
         //theQT = FindObjectOfType<QuestTrigger>();
         theDS = FindObjectOfType<DialogueScript>();
         theQOOC = FindObjectOfType<QuestOnOffClear>();
+        
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (dialogueActive && Input.GetKeyDown(KeyCode.Space))
-        {                      
+         {
+            //theDS = FindObjectOfType<DialogueScript>();
             currentLine++;
+
+
         }
 
         if (currentLine >= dialogueLines.Length)
@@ -65,7 +69,7 @@ public class DialogueManager : MonoBehaviour {
     public void ShowDialogue()
     {
         //
-        dialogueLines = theDS.dialogueLines;
+        //dialogueLines = theDS.dialogueLines;
         thePC.playerNowDialogue = true;        
         dialogueActive = true;
         dBox.SetActive(true);
@@ -74,7 +78,7 @@ public class DialogueManager : MonoBehaviour {
     //
     public void QuestDialogue()
     {
-        dialogueLines = theDS.questDialogueLines;
+        //dialogueLines = theDS.questDialogueLines;
         thePC.playerNowDialogue = true;
         dialogueActive = true;
         dBox.SetActive(true);
@@ -84,7 +88,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void IngQuestDialogue()
     {
-        dialogueLines = theDS.ingQuestDialogueLines;
+        //dialogueLines = theDS.ingQuestDialogueLines;
         thePC.playerNowDialogue = true;
         dialogueActive = true;
         dBox.SetActive(true);  
@@ -93,7 +97,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void ClearDialogue()
     {
-        dialogueLines = theDS.clearDiaglogueLines;
+        //dialogueLines = theDS.clearDiaglogueLines;
         thePC.playerNowDialogue = true;
         dialogueActive = true;
         dBox.SetActive(true);

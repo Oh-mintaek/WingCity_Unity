@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ShepherdingQuest : MonoBehaviour {
 
-    private QuestTrigger theQT;
+    //private QuestTrigger theQT;
     //private QuestManager theQM;
+    public QuestOnOffClear theQOOC;
 
     public int questNumber;
     public GameObject player;
@@ -18,9 +19,10 @@ public class ShepherdingQuest : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         player = GameObject.Find("newPlayer");
-        theQT = FindObjectOfType<QuestTrigger>();
+        //theQT = FindObjectOfType<QuestTrigger>();
         //theQM = FindObjectOfType<QuestManager>();
-        
+        theQOOC = FindObjectOfType<QuestOnOffClear>();
+
         sheepsDistance = new Vector3[sheeps.Length];
 	}
 	
@@ -42,10 +44,11 @@ public class ShepherdingQuest : MonoBehaviour {
 
     void Shepherding()
     {
-        if (sum <= 200 && theQT.startQuest)
+        if (sum <= 200 && theQOOC.startQuest[questNumber])
         {
             Debug.Log("Shephering success");
-            theQT.endQuest = true;
+            theQOOC.endQuest[questNumber] = true;
+
             
             //theQM.quests[questNumber].gameObject.SetActive(false);
             //theQM.quests[questNumber].EndQuest();

@@ -17,8 +17,9 @@ public class DialogueScript : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        theDM = FindObjectOfType<DialogueManager>();
-        theQOOC = FindObjectOfType<QuestOnOffClear>();
+
+        //theDM = FindObjectOfType<DialogueManager>();
+        //theQOOC = FindObjectOfType<QuestOnOffClear>();
 
     }
 
@@ -30,24 +31,29 @@ public class DialogueScript : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D other)
     {
+
         if (other.gameObject.name == "newPlayer")
         {
+            theDM = FindObjectOfType<DialogueManager>();
+            theQOOC = FindObjectOfType<QuestOnOffClear>();
+
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                //dMAn.ShowBox(dialogue);
+                
                 if (!theDM.dialogueActive)
                 {
 
 
                     if (!theQOOC.startQuest[questNumber]&&!theQOOC.triggerQuest[questNumber])
                     {
-                        //dMAn.dialogueLines = dialogueLines;
+                        theDM.dialogueLines = dialogueLines;
                         theDM.currentLine = 0;
                         theDM.ShowDialogue();
                     }
 
                     else if (!theQOOC.startQuest[questNumber] && theQOOC.triggerQuest[questNumber])
                     {
+                        theDM.dialogueLines = questDialogueLines;
 
                         theDM.currentLine = 0;
                         theDM.QuestDialogue();
@@ -56,12 +62,14 @@ public class DialogueScript : MonoBehaviour {
 
                     else if (theQOOC.startQuest[questNumber]&&!theQOOC.endQuest[questNumber])
                     {
+                        theDM.dialogueLines = ingQuestDialogueLines;
                         theDM.currentLine = 0;
                         theDM.IngQuestDialogue();
                     }
 
                     else if (theQOOC.startQuest[questNumber] && theQOOC.endQuest[questNumber])
                     {
+                        theDM.dialogueLines = clearDiaglogueLines;
                         theDM.currentLine = 0;
                         theDM.ClearDialogue();
                     }

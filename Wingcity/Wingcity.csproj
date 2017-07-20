@@ -108,6 +108,8 @@
     <Compile Include="Assets\Scripts\QuestSheepController.cs" />
     <Compile Include="Assets\Scripts\QuestTrigger.cs" />
     <Compile Include="Assets\Scripts\SaveLoad.cs" />
+    <Compile Include="Assets\Scripts\ScenarioManager.cs" />
+    <Compile Include="Assets\Scripts\ScenarioScript.cs" />
     <Compile Include="Assets\Scripts\SelectMenu.cs" />
     <Compile Include="Assets\Scripts\SheepController.cs" />
     <Compile Include="Assets\Scripts\ShepherdingQuest.cs" />
@@ -135,10 +137,15 @@
   <ItemGroup>
     <None Include="Assets\PixelPerfectCamera\README.txt" />
     <None Include="Assets\PixelPerfectCamera\background_art_license.txt" />
+    <None Include="Assets\Tiled2Unity\Imported\Map001-1.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\Map001-2.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\Map001-3.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\Map001.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\Map002.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\Map003.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\Map004-1.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\Map004.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\Map005.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\TestMap.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
     <None Include="Assets\Tiled2Unity\Imported\test1.tiled2unity.xml" />

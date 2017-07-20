@@ -24,7 +24,7 @@ public class TitleMenuManager : MonoBehaviour {
 
     public void StartButton()
     {
-        SceneManager.LoadScene("Map004");
+        SceneManager.LoadScene("Map000");
     }
 
     public void LoadButton()

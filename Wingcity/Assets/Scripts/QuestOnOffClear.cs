@@ -16,7 +16,7 @@ public class QuestOnOffClear : MonoBehaviour {
 	void Start ()
     {
 
-        theDS = FindObjectOfType<DialogueScript>();
+        //theDS = FindObjectOfType<DialogueScript>();
 
 		for(int i= 0; i < quests; i++)
         {
@@ -36,22 +36,26 @@ public class QuestOnOffClear : MonoBehaviour {
 
     public void QuestTrigger()
     {
+        theDS = FindObjectOfType<DialogueScript>();
         triggerQuest[theDS.questNumber] = true;
     }
 
     public void QuestStart()
-    {        
+    {
+        theDS = FindObjectOfType<DialogueScript>();
         startQuest[theDS.questNumber] = true;
         triggerQuest[theDS.questNumber] = false;
     }
         
     public void QuestEnd()
-    {        
+    {
+        theDS = FindObjectOfType<DialogueScript>();
         endQuest[theDS.questNumber] = true;        
     }
 
     public void QuestClear()
     {
+        theDS = FindObjectOfType<DialogueScript>();
         clearQuest[theDS.questNumber] = true;
         startQuest[theDS.questNumber] = false;
         endQuest[theDS.questNumber] = false;

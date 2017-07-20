@@ -84,6 +84,7 @@
     <Compile Include="Assets\PixelPerfectCamera\Scripts\PixelPerfectCamera.cs" />
     <Compile Include="Assets\PixelPerfectCamera\Scripts\PixelSnap.cs" />
     <Compile Include="Assets\PixelPerfectCamera\Scripts\Scroller.cs" />
+    <Compile Include="Assets\Scripts\Boundary.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\DayNightController.cs" />
     <Compile Include="Assets\Scripts\DialogueHolder.cs" />
